@@ -1,0 +1,20 @@
+
+
+
+
+
+
+<%= form_with model: @book do |f| %>
+  <div class ="text-field">
+    <div>title</div>
+    <%= f.text_field :title %>
+  </div>
+  
+  <div class ="text-area">
+    <div>body</div>
+    <%= f.text_area :body %>
+  </div>
+  
+  <div class ="text-submit"><%= f.submit 'Create Book' %></div>
+
+<% end %>
