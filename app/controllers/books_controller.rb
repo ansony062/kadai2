@@ -9,20 +9,30 @@ class BooksController < ApplicationController
       flash[:notice] = "Book was successfully created."
       redirect_to book_path(@book.id)
     else
-      flash.now[:alert]
-      render :new
+      @books = Book.all
+      render :index
+    end
   end
 
   def index
+    @books = Book.all
+    
+    @book = Book.new
   end
 
   def show
+    @book = Book.find(params[:id])
   end
 
   def edit
+    @book = Book.find(params[:id])
   end
   
   def update
+    book = Book.find(params[:id])
+    book.update(book_params)
+    flash[:notice] = "Book was successfully created."
+    redirect_to book_path(@book.id)
   end
   
   def destroy
@@ -32,7 +42,7 @@ class BooksController < ApplicationController
   private
   
   def book_params
-    params.repuire(:list).permit(:title, :body)
+    params.repuire(:book).permit(:title, :body)
   end
   
 end
