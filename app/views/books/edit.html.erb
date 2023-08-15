@@ -1,4 +1,8 @@
-<div class="edit-top">Editing Book</div>
+<div>
+  <%= flash[:notice] %>
+</div>
+
+<h3 class="edit-top">Editing Book</h3>
 
 <%= form_with model: @book do |f| %>
 

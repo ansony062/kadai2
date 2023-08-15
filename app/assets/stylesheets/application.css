@@ -93,3 +93,18 @@ td{
 .menu-list{
   font-size: 13px;
 }
+
+
+.edit-top{
+  font-size: 26px;
+  margin: 17px 0;
+}
+
+.edit-box{
+  padding: 1px 6px;
+}
+
+.edit-item{
+  margin: 0 0 10px;
+  font-size: 13px;
+}
